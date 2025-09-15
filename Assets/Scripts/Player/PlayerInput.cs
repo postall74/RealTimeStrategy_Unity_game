@@ -30,6 +30,9 @@ namespace GameDevTV.RTS
                 _moveAmount.x += _keyboardPanSpeed;
 
             _moveAmount *= Time.deltaTime;
+
+            ///TODO: Данный код надо будет перенести в отдельный класс управления камерой, 
+            ///для разделения логики управления и перемещения камеры что сократить отвественности.
             _cameraTarget.position += new Vector3(_moveAmount.x, 0, _moveAmount.y);
         }
     }
